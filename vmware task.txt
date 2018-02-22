@@ -1,0 +1,9 @@
+Vmware
+install esxi hypervisor on baremetal
+and created multiple vm with different RAID configuration
+vm eg: centos and windows with alloted desired configuration
+created snapshot for centos and windows and reverted back
+created template and with that template created multiple vm's
+installed vshpere and vcenter in one of our windows server 
+added different host(exsi ip) to vcenter through vcenter migrated different vm to other host
+clone other vm to spin up other same vm's

@@ -1,0 +1,67 @@
+ To show the list of Authors on the screen when u click AUTHOR link
+
+1. User click on  AUTHOR link (/author).
+2. Then the control will search for the value (/author) in the package of java classes mostly web controller will have it (AuthorController)
+3. The AuthorController will call List method which again call findAll method of AuthorServiceImpl
+4. AuthorService findall method call the resource class AuthorJpaRepository to fetch all the Author details from Author Table.
+5. The list fetch from Author table will be mapped to list of beans in AUTHOR table
+6. The list again sent back to jsp to show in the screen.
+
+
+
+When User click on CREATE in the AUthor page
+
+1.  User click on create in the Author Page.
+2. Then the control will search for the value (/create) in the package of java classes mostly web controller will have it (AuthorController)
+3. Then the create() method of AuthorServiceImpl will be called 
+4. Then Service will check whether the user is already existing if existing it will throws error saying Author already existing else creates
+5. After successfully created the Author the AuthorServiceImpl will show successfull message through message.properties to the AuthorController and then to JSP.
+
+
+Wnen USer click on UPDATE in the Author Page
+1. User click on update in the author page.
+2. Then the control will search for the value (/update) in the package of java classes mostly web controller will have it (AuthorController)
+3. Then the update() method of AuthorServiceImpl will be called 
+4. Then Service will check whether the user is already existing if existing then AuthorServiceImpl will update the Author
+5. After successfully update the Author the AuthorServiceImpl will show successfull message through message.properties to the AuthorController and then to JSP.
+
+
+
+
+Wnen USer click on DELETE in the Author Page
+1. User click on delete in the author page.
+2. Then the control will search for the value (/delete/{id}) in the package of java classes mostly web controller will have it (AuthorController)
+3. Then the delete() method of AuthorServiceImpl will be called 
+4. Then Service will check whether the user is already existing if existing then AuthorServiceImpl will delete the Author
+5. After successfully deleting the Author the AuthorServiceImpl will show successfull message through message.properties to the AuthorController and then to JSP.
+
+
+
+1. JSP --> Controller --> ((Services -->  ServicesIMPL --> AuthorJpaRepository)) --> create/update/delete from Table
+2.create/update/delete from Table----->
+
+
+
+-------------------------------------
+
+If db connect 
+
+--> Java connection to DB
+---> Java db drivers load
+---> Statement sql construct  
+----> Resultset preparation
+----> Connection close 
+
+
+
+
+
+
+
+
+
+
+
+MVC -->   Models (Bean class (AUTHOR) Business Logic performed eg ServiceImpl, Author, services etc)
+          View ( Jsp, Htmls, etc)
+		  Controllers ( Will takes request and direct to business logic /services for actions and response back to View)

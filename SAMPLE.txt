@@ -1,0 +1,26 @@
+set PATH=%m2_HOME%\bin;%java_HOME%\bin;%PATH%
+echo %PATH%
+C:\Users\sagar\Desktop\gitdemo\demorepo\BuildJavaRepo\target>
+C:\Program Files\Java\jdk9\bin
+
+
+
+<properties>
+<maven.compiler.source>1.6</maven.compiler.source>
+<maven.compiler.target>1.6</maven.compiler.target>
+</properties>
+
+
+<distributionManagement>
+	  <repository>
+	    <id>releases</id>
+	    <!-- CHANGE HERE by your team nexus server -->
+	    <url>http://172.16.103.204:8080/nexus/content/repositories/releases/</url>
+	  </repository>
+	  <snapshotRepository>
+	    <id>snapshots</id>
+	    <!-- CHANGE HERE by your team nexus server -->
+	    <url>http://172.16.103.204:8080/nexus/content/repositories/snapshots/</url>
+	  </snapshotRepository>
+	</distributionManagement>
+	

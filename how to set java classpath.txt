@@ -1,0 +1,13 @@
+CLASSPATH can be set permanently in the environment: In Windows, choose control panel ? System ? Advanced ? Environment Variables ? choose "System Variables" (for all the users) or "User Variables" (only the currently login user) ? choose "Edit" (if CLASSPATH already exists) or "New" ? Enter "CLASSPATH" as the variable name ? Enter the required directories and JAR files (separated by semicolons) as the value (e.g., ".;c:\javaproject\classes;d:\tomcat\lib\servlet-api.jar"). Take note that you need to include the current working directory (denoted by '.') in the CLASSPATH.
+
+To check the current setting of the CLASSPATH, issue the following command:
+
+> SET CLASSPATH
+
+CLASSPATH can be set temporarily for that particular CMD shell session by issuing the following command:
+
+> SET CLASSPATH=.;c:\javaproject\classes;d:\tomcat\lib\servlet-api.jar
+
+Instead of using the CLASSPATH environment variable, you can also use the command-line option -classpath or -cp of the javac and java commands, for example,
+
+> java –classpath c:\Users\sagar\Desktop\gitdemo\demorepo\BuildJavaRepo\target>
